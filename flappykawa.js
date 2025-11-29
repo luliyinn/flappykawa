@@ -5,7 +5,7 @@ document.fonts.ready.then(() => {
 function drawStartScreen() {
   context.fillStyle = "white"; 
     context.strokeStyle = 'black';
-    context.font = "100px TTpixel"; // Now this should work!
+    context.font = "100px TTpixel"; 
     context.fillText("START", boardWidth/2.5, boardHeight/2);
 }
 
@@ -222,5 +222,6 @@ function changeSkin(skin) {
     context.drawImage(birdImage, bird.x, bird.y, bird.width, bird.height);
   }
 }
+
 
 
