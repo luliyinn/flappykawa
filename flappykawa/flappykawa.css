@@ -1,0 +1,55 @@
+    @font-face {
+        font-family: 'TTpixel'; /* A name you choose for your font */
+        src: url('font/thatthatnewpixelfamilytest-square.otf') format('otf'), /* Path to your font files */
+            url('font/thatthatnewpixelfamilytest-square.otf') format('truetype');
+    }
+
+body {
+  font-family:'TTpixel';
+  text-align: center; /*makes everything centered*/
+  background-color: rgb(255, 255, 255);
+}
+
+.containers {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+}
+
+#board {
+  margin-top: 8.5%;
+  background-image: url(/images/background.png);
+  background-size: 1000px;
+  scale: 1.3;
+  border-style: solid;
+  border-width:1px
+}
+
+button {
+position: absolute; 
+top: 310px;
+left: 30px;
+z-index: 10;
+font-size: 10px;
+}
+
+.skin-container {
+  align-items: center;
+  text-align: center;
+  left: 10px;
+}
+
+.choose-skin-button {
+  position: relative;
+  z-index: 10;
+  font-size: 60px;
+  top: -100px;
+  margin: 10px;
+  font-family: TTpixel;
+  padding: 10px 10px 0px 10px;
+}
+
+.choose-skin {
+  margin-top: 8%;
+  margin-left: 10%;
+  font-size: 100px;
+}
