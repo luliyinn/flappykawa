@@ -1,5 +1,4 @@
 document.fonts.ready.then(() => {
-    // 2. ONLY draw text once the fonts are confirmed loaded
     drawStartScreen(); 
 });
 
@@ -60,16 +59,16 @@ window.onload = function() {
 
   // load images
   birdImage = new Image(); // draws an image thats empty
-  birdImage.src = "/images/hachiware.png"; // gives the image
+  birdImage.src = "images/hachiware.png"; // gives the image
   birdImage.onload = function() {
   context.drawImage(birdImage, bird.x, bird.y, bird.width, bird.height)
   }
 
   topPipeImage = new Image();
-  topPipeImage.src = "/images/toppipe.png"
+  topPipeImage.src = "images/toppipe.png"
 
   bottomPipeImage = new Image();
-  bottomPipeImage.src = "/images/bottompipe.png"
+  bottomPipeImage.src = "images/bottompipe.png"
 
   context.fillStyle = "white"; // color of the font
   context.strokeStyle = 'black';
@@ -213,14 +212,15 @@ function detectCollision(a, b) { // aabb collision detection
 function changeSkin(skin) {
   context.clearRect(bird.x, bird.y, birdWidth, birdHeight);
   if (skin == 2) {
-      birdImage.src = "/images/chiikawa.png"; 
+      birdImage.src = "images/chiikawa.png"; 
   } else if (skin == 1) {
-      birdImage.src = "/images/hachiware.png"; 
+      birdImage.src = "images/hachiware.png"; 
   } else if (skin == 3) {
-      birdImage.src = "/images/usagi.png"; 
+      birdImage.src = "images/usagi.png"; 
   }
     birdImage.onload = function() {
     context.drawImage(birdImage, bird.x, bird.y, bird.width, bird.height);
   }
 }
+
 
