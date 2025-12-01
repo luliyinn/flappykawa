@@ -5,7 +5,7 @@ document.fonts.ready.then(() => {
 function drawStartScreen() {
   context.fillStyle = "white"; 
     context.strokeStyle = 'black';
-    context.font = "100px TTpixel"; 
+    context.font = "100px TTpixel"; // 
     context.fillText("START", boardWidth/2.5, boardHeight/2);
 }
 
@@ -223,5 +223,13 @@ function changeSkin(skin) {
   }
 }
 
-
+function adjustAmount(plusMinus) { 
+  if (plusMinus == 1) {
+    velocityY = velocityY - 1
+    gravity = gravity + 0.1
+  } else if (plusMinus == 2) {
+    velocityY = velocityY + 1
+    gravity = gravity - 0.1
+  }
+}
 
