@@ -1,8 +1,8 @@
-    @font-face {
-        font-family: 'TTpixel'; /* A name you choose for your font */
-        src: url('font/thatthatnewpixelfamilytest-square.otf') format('otf'), /* Path to your font files */
-            url('font/thatthatnewpixelfamilytest-square.otf') format('truetype');
-    }
+ @font-face {
+    font-family: 'TTpixel'; /* A name you choose for your font */
+    src: url('font/thatthatnewpixelfamilytest-square.otf') format('otf'), /* Path to your font files */
+    url('font/thatthatnewpixelfamilytest-square.otf') format('truetype');
+}
 
 body {
   font-family:'TTpixel';
@@ -52,5 +52,21 @@ font-size: 10px;
   margin-top: 8%;
   margin-left: 10%;
   font-size: 100px;
+}
 
+.adjust-speed {
+  position: absolute;
+  font-size: 80px;
+  top: 540px;
+  text-align: center;
+  left: 50px;
+}
+
+.plus-minus-speed {
+  position: relative;
+  font-size: 60px;
+  top: 130px;
+  left: -40px;
+  font-family: TTpixel;
+  
 }
