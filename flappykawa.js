@@ -191,6 +191,7 @@ function moveBird(e) {
     //jump
     velocityY = -4;
 
+
     // reset game
     if (gameOver) {
       bird.y = birdY;
@@ -225,11 +226,11 @@ function changeSkin(skin) {
 
 function adjustAmount(plusMinus) { 
   if (plusMinus == 1) {
-    velocityY = velocityY - 1
-    gravity = gravity + 0.1
+    velocityY = velocityY*2
+    gravity = gravity*2
   } else if (plusMinus == 2) {
-    velocityY = velocityY + 1
-    gravity = gravity - 0.1
+    velocityY = velocityY/2
+    gravity = gravity/2
   }
 }
 
