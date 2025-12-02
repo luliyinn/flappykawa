@@ -53,20 +53,3 @@ font-size: 10px;
   margin-left: 10%;
   font-size: 100px;
 }
-
-.adjust-speed {
-  position: absolute;
-  font-size: 80px;
-  top: 540px;
-  text-align: center;
-  left: 50px;
-}
-
-.plus-minus-speed {
-  position: relative;
-  font-size: 60px;
-  top: 130px;
-  left: -40px;
-  font-family: TTpixel;
-  
-}
