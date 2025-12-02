@@ -39,15 +39,19 @@ let topPipeImage;
 let bottomPipeImage;
 
 // physics
-let velocityX = -2; // pipes moving left speed
+let velocityX = -3; // pipes moving left speed
 let velocityY = 0; // bird jump speed
-let gravity = 0.1;
+let gravity = 0.4;
 
 let gameOver = false;
 let score = 0;
 let highScore = 0;
 
+
 window.onload = function() {
+
+  measureRefreshRate();
+
   board = document.getElementById("board");
   board.height = boardHeight;
   board.width = boardWidth;
@@ -82,10 +86,14 @@ window.onload = function() {
   function startGame(event) {
     document.removeEventListener("keydown", startGame)
     requestAnimationFrame(update);
-    setInterval(placePiples, 2000); // calls placePipes function every 1.5s
+   
+    setInterval(placePiples, 2000); // calls placePipes function 
+    
+   
     document.addEventListener("keydown", moveBird); // if u tap on a key, its gonna call the function
   }
 }
+
 
 function update() {
 
@@ -117,7 +125,6 @@ function update() {
 
       if (score > highScore) {
           highScore = score;
-          saveHighscore(highScore);
       }
     }
 
@@ -189,7 +196,7 @@ function moveBird(e) {
 
   if (e.code == "Space" || e.code == "ArrowUp") { // .code tells which key has been pressed
     //jump
-    velocityY = -4;
+    velocityY = -7;
 
 
     // reset game
@@ -224,13 +231,29 @@ function changeSkin(skin) {
   }
 }
 
-function adjustAmount(plusMinus) { 
-  if (plusMinus == 1) {
-    velocityY = velocityY*2
-    gravity = gravity*2
-  } else if (plusMinus == 2) {
-    velocityY = velocityY/2
-    gravity = gravity/2
-  }
-}
+function measureRefreshRate() {
+  let frameCount = 0;
+  let startTime = 0;
+  const duration = 1000;
 
+  function step(timestamp) {
+    if (startTime === 0) {
+      startTime = timestamp;
+    }
+
+    const elapsed = timestamp - startTime;
+    frameCount++;
+
+    if (elapsed >= duration) {
+      const calculatedFps = frameCount / (elapsed / 1000);  
+      const roundedFps = Math.round(calculatedFps);
+
+    alert("calculating ur refresh rate .....");
+    alert(roundedFps)
+
+      return;
+    }
+    window.requestAnimationFrame(step); 
+  }
+  window.requestAnimationFrame(step);
+}
