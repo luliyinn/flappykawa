@@ -87,7 +87,7 @@ window.onload = function() {
     document.removeEventListener("keydown", startGame)
     requestAnimationFrame(update);
    
-    setInterval(placePiples, 2000); // calls placePipes function 
+    setInterval(placePiples, 2500); // calls placePipes function 
     
    
     document.addEventListener("keydown", moveBird); // if u tap on a key, its gonna call the function
@@ -257,3 +257,4 @@ function measureRefreshRate() {
   }
   window.requestAnimationFrame(step);
 }
+
